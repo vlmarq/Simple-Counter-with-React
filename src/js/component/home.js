@@ -1,24 +1,27 @@
-import React from "react";
+// import React, { useState } from "react";
+// import SecondsCounter from "./SecondsCounter.js";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+// //include images into your bundle
 
-//create your first component
-export function Home() {
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
-}
+// //create your first component
+// export function Home() {
+// 	const [counter, setCounter] = useState(0);
+
+// 	setInterval(() => {
+// 		setCounter(counter - 1);
+// 	}, 1000);
+
+// 	return (
+// 		<div>
+// 			<div />
+// 			<span>
+// 				<i className="far fa-clock fa-5x" />
+// 			</span>
+// 			<span className="h2">{counter}</span>
+// 			<span className="h2">0</span>
+// 			<span className="h2">0</span>
+// 			<span className="h2">0</span>
+// 			<span className="h2">0</span>
+// 		</div>
+// 	);
+// }
