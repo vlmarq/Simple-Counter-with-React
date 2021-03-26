@@ -1,32 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const SecondsCounter = props => {
-	// Returns HTML and Bootstrap layout
+const SecondsCounter = props => {
 	return (
-		<div className="container bg-dark text-white rounded">
+		<div className="d-flex justify-content-center align-items-center text-white">
 			<div className="row">
-				<span className="col border-light">
-					<i className="far fa-clock fa-5x" />
-				</span>
-				<span className="col border border-light border-bottom-0 h3">
-					{props.secondSix % 10}
-				</span>
-				<span className="col border border-light border-bottom-0 h3">
-					{props.secondFive % 10}
-				</span>
-				<span className="col border border-light border-bottom-0 h3">
-					{props.secondFour % 10}
-				</span>
-				<span className="col border border-light border-bottom-0 h3">
-					{props.secondThree % 10}
-				</span>
-				<span className="col border border-light border-bottom-0 h3">
-					{props.secondTwo % 10}
-				</span>
-				<span className="col border border-light border-bottom-0 h3">
-					{props.secondOne % 10}
-				</span>
+				<div className="col my-3 mx-2 py-2 text-center bg-info align-self-center">
+					<i className="far fa-clock fa-3x display-4" />
+				</div>
+				<div className={divStyles}>{props.secondSix % 10}</div>
+				<div className={divStyles}>{props.secondFive % 10}</div>
+				<div className={divStyles}>{props.secondFour % 10}</div>
+				<div className={divStyles}>{props.secondThree % 10}</div>
+				<div className={divStyles}>{props.secondTwo % 10}</div>
+				<div className={divStyles}>{props.secondOne % 10}</div>
 			</div>
 		</div>
 	);
@@ -40,5 +27,8 @@ SecondsCounter.propTypes = {
 	secondFive: PropTypes.number,
 	secondSix: PropTypes.number
 };
+
+//Bootstrap styles to pass in className for seconds divs
+let divStyles = "col my-3 mx-2 py-2 px-4 display-4 text-center bg-info";
 
 export default SecondsCounter;
